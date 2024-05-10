@@ -6,3 +6,19 @@ html, body {
 canvas {
   display: block;
 }
+
+
+#ProjectMenu{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+
+
+
+#map {   
+  height: 1100px;
+}
+
+#mapPopup {
+  font-family: 'Courier New', Courier, monospace;
+}

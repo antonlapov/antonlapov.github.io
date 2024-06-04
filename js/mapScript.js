@@ -1,4 +1,3 @@
-
 var map;
 var marker1, marker2;
 const popUp1 = L.popup();
@@ -9,12 +8,9 @@ xhr.open("GET", "texts/johnObject.txt", true);
 // If specified, responseType must be empty string or "text"
 xhr.responseType = "text";
 
-
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE) {
     if (xhr.status === 200) {
-      //console.log(xhr.responseXML);
-      //console.log(xhr.responseText);
 
     let xstr = xhr.responseText;  //var for storing text with all raw markup content for putting into popups as a string
     const popupContent = xstr.split(';');
@@ -33,27 +29,9 @@ xhr.send(null);
     }).addTo(map);
 
 
-  
- 
-
-    //popUp1 = L.popup().setContent("sdsd");
     marker1 = L.marker([49.83287458719944, 24.038038380287162]).addTo(map);
     marker1.bindPopup(popUp1);
 
     //marker2 = L.marker([49.83787458719944, 24.037038380287162]).addTo(map);
-
-
-
-function setup(){
-    createCanvas(400,400);
-   // print(marker1);
-    print(marker1.options);
-    //print(marker2.getPane());
-}
-
-function draw(){
-    rect(50,50,50,50);
-   
-}
 
 

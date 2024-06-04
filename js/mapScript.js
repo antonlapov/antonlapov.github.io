@@ -1,32 +1,59 @@
-let data1;
-let data11;
 
-function preload(){
+var map;
+var marker1, marker2;
+const popUp1 = L.popup();
 
-}
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "texts/johnObject.txt", true);
+
+// If specified, responseType must be empty string or "text"
+xhr.responseType = "text";
+
+
+xhr.onload = () => {
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      //console.log(xhr.responseXML);
+      //console.log(xhr.responseText);
+
+    let xstr = xhr.responseText;  //var for storing text with all raw markup content for putting into popups as a string
+    const popupContent = xstr.split(';');
+    popUp1.setContent(popupContent[0]);
+    }
+  }
+};
+
+xhr.send(null);
+
+
+    map = L.map('map').setView([49.83287458719944, 24.04], 13.25);
+    let mLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+
+  
+ 
+
+    //popUp1 = L.popup().setContent("sdsd");
+    marker1 = L.marker([49.83287458719944, 24.038038380287162]).addTo(map);
+    marker1.bindPopup(popUp1);
+
+    //marker2 = L.marker([49.83787458719944, 24.037038380287162]).addTo(map);
+
+
 
 function setup(){
-    data1 = loadStrings('texts/johnObject.txt');
-    data11 = data1[1];
-    print(data11);
+    createCanvas(400,400);
+   // print(marker1);
+    print(marker1.options);
+    //print(marker2.getPane());
 }
 
-
-var map = L.map('map').setView([49.83287458719944, 24.038038380287162], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-
-var div1 = document.createElement("div");
-div1.style.width = '350px';
-//div1.innerHTML += '<b>John Object (Тімур Джафаров)</b1><p></p><iframe width="85%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FFuturePerfect%2Fjohn-object-program-1%2F" frameborder="0" ></iframe>';
-div1.innerHTML += data1[0];
-  
-var marker1 = L.marker([49.83287458719944, 24.038038380287162]).addTo(map);
-marker1.bindPopup(div1);
-
-
+function draw(){
+    rect(50,50,50,50);
+   
+}
 
 

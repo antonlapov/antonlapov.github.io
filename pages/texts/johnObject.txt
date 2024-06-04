@@ -1,2 +1,2 @@
-<b>John Object</b> <p></p> <iframe width="85%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FFuturePerfect%2Fjohn-object-program-1%2F" frameborder="0" ></iframe>
-
+<div class="popup"><iframe width="85%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FFuturePerfect%2Fjohn-object-program-1%2F" frameborder="0" ></iframe></div>;
+<div class="popup"><iframe width="85%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FFuturePerfect%2F%D2%91%D1%84%D0%BD-galician-funky-noise-radio-broadcasts-%D2%91%D1%84%D0%BD-1-2%2F" frameborder="0" ></iframe></div>

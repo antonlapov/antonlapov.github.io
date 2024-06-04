@@ -1,12 +1,27 @@
-html, body {
+html{
   margin: 0;
   padding: 0;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+}
 canvas {
   display: block;
 }
 
+.popup{
+  width: 450px;
+}
+
+.leaflet-popup-tip-container {
+  opacity: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  opacity: 1;
+  width: 420px;
+}
 
 #ProjectMenu{
   font-family:Arial, Helvetica, sans-serif;
@@ -16,7 +31,10 @@ canvas {
 
 
 #map {   
-  height: 1100px;
+  z-index:1; position:absolute; width:100%;height:100%; margin:0; padding:0; }
+
+#cont1 {   
+  z-index: 1;
 }
 
 #mapPopup {

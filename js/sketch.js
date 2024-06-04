@@ -19,7 +19,7 @@ new p5(s1);
 var s2 = function( sketch ) {
 
    sketch.setup = function() {
-    let canvas2 = sketch.createCanvas(300, 100, sketch.WEBGL);
+    let canvas2 = sketch.createCanvas(100, 100, sketch.WEBGL);
     canvas2.parent("myCanvasB");
     //canvas2.position(100,0);
   }
